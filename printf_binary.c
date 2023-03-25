@@ -8,14 +8,15 @@
  **/
 int printf_binary(va_list list)
 {
-	char number[33];
+	char *p_buff;
 	int len, i;
 
-	_itoa(va_arg(list, unsigned int), number, 2);
-	len = _strlen(number);
+	p_buff = itoa(va_arg(list, unsigned int), 2);
 
-	for (i = 0; i < len; i++)
-		_putchar(number[i]);
+	len = _strlen(p_buff);
+
+	for(i = 0 ; i < len ; i++)
+		_putchar(p_buff[i]);
 
 	return (len);
 }

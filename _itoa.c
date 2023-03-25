@@ -1,77 +1,34 @@
-/**
- * swap - function to swap two numbers
- * @x: char 1
- * @y: char 2
- *
- * @x and @y are swapped
- */
-void swap(char *x, char *y)
-{
-	char t = *x;
-	*x = *y;
-	*y = t;
-}
-
+#include "main.h"
 
 /**
- * reverse - function to reverse `buffer[i…j]`
- * @buffer: contained string to be reversed
- * @i: first index
- * @j: second index
+ * _itoa - integer to ascii
+ * @num: num
+ * @base: base
  *
- * Return: reversed string
- */
-char *reverse(char *buffer, int i, int j)
+ * Return: char
+ **/
+char *itoa(long int num, int base)
 {
-	while (i < j)
-		swap(&buffer[i++], &buffer[j--]);
+	static char *array = "0123456789abcdef";
+	static char buffer[50];
+	char sign = 0;
+	char *ptr;
+	unsigned long n = num;
 
-	return (buffer);
-}
-
-
-/**
- * _itoa - Iterative function to change given number
- * to reuired base
- * @value: vale to be converted
- * @buffer: string to save binary value
- * @base: base to convert into
- *
- * Return: number of base n
- */
-char *_itoa(int value, char *buffer, int base)
-{
-	int n, i, r;
-
-	if (base < 2 || base > 32)
-		return (buffer);
-
-
-	if (value < 0)
-		value = -value;
-
-	i = 0;
-	n = value;
-
-	while (n)
+	if (num < 0)
 	{
-		r = n % base;
-
-		if (r >= 10)
-			buffer[i++] = 65 + (r - 10);
-		else
-			buffer[i++] = 48 + r;
-
-		n /= base;
+		n = -num;
+		sign = '-';
 	}
+	ptr = &buffer[49];
+	*ptr = '\0';
 
-	if (i == 0)
-		buffer[i++] = '0';
+	do      {
+		*--ptr = array[n % base];
+		n /= base;
+	} while (n != 0);
 
-	if (value < 0 && base == 10)
-		buffer[i++] = '-';
-
-	buffer[i] = '\0';
-
-	return (reverse(buffer, 0, i - 1));
+	if (sign)
+		*--ptr = sign;
+	return (ptr);
 }
