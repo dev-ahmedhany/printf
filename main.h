@@ -23,9 +23,9 @@ int _printf(const char *format, ...);
 /* extra functions */
 int _strlen(const char *);
 int _putchar(char);
-char* _itoa (int value, char* buffer, int base);
+char *_itoa (int value, char* buffer, int base);
 void swap(char *x, char *y);
-char* reverse(char *buffer, int i, int j);
+char *reverse(char *buffer, int i, int j);
 
 /* placeHolder.c */
 int findPlaceHolder(const char *, va_list);
