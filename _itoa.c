@@ -1,5 +1,5 @@
 /**
- * swap: function to swap two numbers
+ * swap - function to swap two numbers
  * @x: char 1
  * @y: char 2
  *
@@ -14,12 +14,12 @@ void swap(char *x, char *y)
 
 
 /**
- * reverse: function to reverse `buffer[i…j]`
+ * reverse - function to reverse `buffer[i…j]`
  * @buffer: contained string to be reversed
  * @i: first index
- * @j: seconf index
+ * @j: second index
  *
- * Return reversed string
+ * Return: reversed string
  */
 char *reverse(char *buffer, int i, int j)
 {
@@ -31,12 +31,13 @@ char *reverse(char *buffer, int i, int j)
 
 
 /**
- * *_itoa: Iterative function to change given number
+ * _itoa - Iterative function to change given number
  * to reuired base
  * @value: vale to be converted
  * @buffer: string to save binary value
  * @base: base to convert into
- * return number of base n
+ *
+ * Return: number of base n
  */
 char *_itoa(int value, char *buffer, int base)
 {
