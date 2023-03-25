@@ -37,5 +37,6 @@ int printf_binary(va_list);
 int printf_pointer(va_list);
 int printf_rot13(va_list);
 int printf_rev_string(va_list);
+int printf_integer(va_list);
 
 #endif /* MAIN_H */
