@@ -11,7 +11,7 @@ int printf_binary(va_list list)
 	char *p_buff;
 	int len, i;
 
-	p_buff = itoa(va_arg(list, unsigned int), 2);
+	p_buff = _itoa(va_arg(list, unsigned int), 2);
 
 	len = _strlen(p_buff);
 

@@ -23,7 +23,7 @@ int _printf(const char *format, ...);
 /* extra functions */
 int _strlen(const char *);
 int _putchar(char);
-char *itoa(long int, int);
+char *_itoa(long int, int);
 
 
 /* placeHolder.c */
