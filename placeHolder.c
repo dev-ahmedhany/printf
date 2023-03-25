@@ -47,7 +47,8 @@ int substituteFormat(const char *str, va_list list, int *i)
 		{'s', printf_string}, {'c', printf_char}
 	};
 
-	*i = *i + 1;
+	(*i)++;
+
 
 	if (str[*i] == '\0')
 		return (-1);
