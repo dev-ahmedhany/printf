@@ -15,7 +15,7 @@ int printf_binary(va_list list)
 
 	len = _strlen(p_buff);
 
-	for(i = 0 ; i < len ; i++)
+	for (i = 0 ; i < len ; i++)
 		_putchar(p_buff[i]);
 
 	return (len);
