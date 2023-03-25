@@ -1,13 +1,12 @@
 #include "main.h"
 
 /**
- * _putchar - writes the character c to stdout
+ * _putchar uses a local buffer of 1024 to call write
+ * as little as possible
  * @c: The character to print
  *
  * Return: On success 1.
  * On error -1.
- * Description: _putchar uses a local buffer of 1024 to call write
- * as little as possible
  */
 int _putchar(char c)
 {
