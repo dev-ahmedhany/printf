@@ -6,7 +6,7 @@
 #include <stdarg.h>
 
 /**
- * struct _format - Typedef struct
+ * struct format - Typedef struct
  *
  * @type: Format
  * @f: The function implemented
