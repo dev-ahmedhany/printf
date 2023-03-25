@@ -26,6 +26,8 @@ int _putchar(char);
 char *_itoa(int value, char *buffer, int base);
 void swap(char *x, char *y);
 char *reverse(char *buffer, int i, int j);
+int buffer(char);
+
 
 /* placeHolder.c */
 int findPlaceHolder(const char *, va_list);
