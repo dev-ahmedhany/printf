@@ -46,7 +46,7 @@ int substituteFormat(const char *str, va_list list, int *i)
 	format formats[] = {
 		{'s', printf_string}, {'c', printf_char},
 		{'b', printf_binary}, {'p', printf_pointer},
-		{'R', printf_rot13}
+		{'R', printf_rot13}, {'r', printf_rev_string}
 	};
 
 	(*i)++;
