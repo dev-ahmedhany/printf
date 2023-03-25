@@ -19,8 +19,8 @@ int printf_string(va_list list)
 	else
 		len = _strlen(s);
 
-    for (i = 0; i < len; i++)
+	for (i = 0; i < len; i++)
 		_putchar(s[i]);
 
-    return (len);
+	return (len);
 }
