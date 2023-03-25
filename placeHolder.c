@@ -27,6 +27,7 @@ int findPlaceHolder(const char *str, va_list list)
 		_putchar(str[i]);
 		size = size + 1;
 	}
+	_putchar(-1);
 
 
 	return (size);
