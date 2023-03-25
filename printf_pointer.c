@@ -3,7 +3,7 @@
 int dec_to_hex(unsigned long int);
 
 /**
- * printf_pointer - prints an hexgecimal number.
+ * printf_pointer - prints an hexadecimal number.
  * @list: arguments.
  * Return: counter.
  */
