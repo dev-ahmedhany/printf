@@ -34,5 +34,6 @@ int substituteFormat(const char *, va_list, int *);
 int printf_string(va_list);
 int printf_char(va_list);
 int printf_binary(va_list);
+int printf_pointer(va_list);
 
 #endif /* MAIN_H */
