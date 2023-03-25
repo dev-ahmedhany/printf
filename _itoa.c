@@ -36,7 +36,7 @@ char *reverse(char *buffer, int i, int j)
  * @value: vale to be converted
  * @buffer: string to save binary value
  * @base: base to convert into
- * 
+ *
  * Return: number of base n
  */
 char *_itoa(int value, char *buffer, int base)
