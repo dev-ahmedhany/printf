@@ -47,7 +47,9 @@ int substituteFormat(const char *str, va_list list, int *i)
 		{'s', printf_string}, {'c', printf_char},
 		{'b', printf_binary}, {'p', printf_pointer},
 		{'R', printf_rot13}, {'r', printf_rev_string},
-		{'d', printf_integer}, {'i', printf_integer}
+		{'d', printf_integer}, {'i', printf_integer},
+		{'o', printf_octal}, {'x', printf_hex_lower},
+		{'X', printf_hex_upper}
 	};
 
 	(*i)++;

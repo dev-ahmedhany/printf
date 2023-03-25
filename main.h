@@ -38,5 +38,9 @@ int printf_pointer(va_list);
 int printf_rot13(va_list);
 int printf_rev_string(va_list);
 int printf_integer(va_list);
+int printf_unsigned(va_list);
+int printf_octal(va_list);
+int printf_hex_lower(va_list);
+int printf_hex_upper(va_list);
 
 #endif /* MAIN_H */
