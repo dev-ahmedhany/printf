@@ -31,7 +31,7 @@ char *reverse(char *buffer, int i, int j)
 
 
 /**
- * *_itoa: Iterative function to change given number
+ * _itoa - Iterative function to change given number
  * to reuired base
  * @value: vale to be converted
  * @buffer: string to save binary value
