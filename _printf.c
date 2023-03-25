@@ -23,7 +23,6 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	size = findPlaceHolder(format, args);
 
-	_putchar(-1);
 	va_end(args);
 
 	return (size);
