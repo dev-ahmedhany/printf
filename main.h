@@ -23,6 +23,8 @@ int _printf(const char *format, ...);
 /* extra functions */
 int _strlen(const char *);
 int _putchar(char);
+int _puts(char *);
+
 char *_itoa(long int, int);
 
 
@@ -42,5 +44,7 @@ int printf_unsigned(va_list);
 int printf_octal(va_list);
 int printf_hex_lower(va_list);
 int printf_hex_upper(va_list);
+int print_bigS(va_list);
+char *convert(unsigned long int num, int base, int lowercase);
 
 #endif /* MAIN_H */
