@@ -9,27 +9,16 @@ int dec_to_hex(unsigned long int);
  */
 int printf_pointer(va_list list)
 {
-	void *p;
-	char *s = "(nil)";
-	long int a;
-	int b;
-	int i;
+	char *str;
+	int count = 0;
+	unsigned long int p = va_arg(list, unsigned long int);
+	if (!p)
+		return (_puts("(nil)"));
 
-	p = va_arg(list, void*);
-	if (p == NULL)
-	{
-		for (i = 0; s[i] != '\0'; i++)
-		{
-			_putchar(s[i]);
-		}
-		return (i);
-	}
-
-	a = (unsigned long int)p;
-	_putchar('0');
-	_putchar('x');
-	b = dec_to_hex(a);
-	return (b + 2);
+	str = convert(p, 16, 1);
+	count += _puts("0x");
+	count += _puts(str);
+	return (count);
 }
 
 
