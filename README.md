@@ -195,3 +195,11 @@ Handle the following length modifiers for non-custom conversion specifiers:
 l
 h
 Conversion specifiers to handle: d, i, u, o, x, X
+
+### 9. Print some money and give it to us for the rain forests
+
+Handle the field width for non-custom conversion specifiers.
+
+Repo:
+
+GitHub repository: printf
