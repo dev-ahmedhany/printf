@@ -172,7 +172,7 @@ Written by Ahmed Hany and Menna Mohamed
 .SH Reporting Bugs
 Report
 .SB _printf
-bugs to <https://github.com/Obed101/printf/issues>
+bugs to <https://github.com/dev-ahmedhany/printf/issues>
 
 .SH See Also
 https://linux.die.net/man/3/scanf
