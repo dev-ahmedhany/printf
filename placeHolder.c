@@ -46,18 +46,12 @@ int substituteFormat(const char *str, va_list list, int *i)
 	flags_t flags = {0, 0, 0};
 
 	format formats[] = {
-		{'s', printf_string},
-		{'c', printf_char},
-		{'S', print_bigS},
-		{'b', printf_binary},
-		{'p', printf_pointer},
-		{'R', printf_rot13},
-		{'r', printf_rev_string},
-		{'d', printf_integer},
-		{'i', printf_integer},
-		{'o', printf_octal},
-		{'x', printf_hex_lower},
-		{'X', printf_hex_upper},
+		{'s', printf_string}, {'c', printf_char},
+		{'S', print_bigS}, {'b', printf_binary},
+		{'p', printf_pointer}, {'R', printf_rot13},
+		{'r', printf_rev_string}, {'d', printf_integer},
+		{'i', printf_integer}, {'o', printf_octal},
+		{'x', printf_hex_lower}, {'X', printf_hex_upper},
 		{'u', printf_unsigned}
 	};
 
@@ -68,10 +62,7 @@ int substituteFormat(const char *str, va_list list, int *i)
 		return (-1);
 
 	if (str[*i] == '%')
-	{
-		_putchar('%');
-		return (1);
-	}
+		return _putchar('%');
 
 	while (get_flag(str[*i], &flags))
 		(*i)++;
@@ -80,11 +71,7 @@ int substituteFormat(const char *str, va_list list, int *i)
 	for (size = j = 0; j < number_formats; j++)
 	{
 		if (str[*i] == formats[j].type)
-		{
-			size = formats[j].f(list, &flags);
-			return (size);
-		}
-
+			return formats[j].f(list, &flags);
 	}
 
 	_putchar('%'), _putchar(str[*i]);
