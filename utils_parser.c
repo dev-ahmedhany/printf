@@ -84,6 +84,7 @@ void set_precision(const char *str, va_list args,
 	if (*(str + *i) == '*')
 	{
 		fmt_info->prec = va_arg(args, int);
+		fmt_info->star = TRUE;
 		(*i)++;
 	}
 	else if (is_digit(*(str + *i)))

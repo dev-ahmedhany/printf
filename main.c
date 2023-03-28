@@ -116,7 +116,8 @@
  	printf("----Precision test cases----\n");
 	test(_printf(" %10.4f \n",  OneSeventh),printf(" %10.4f \n", OneSeventh));
 	test(_printf(" %30.20f \n",  OneSeventh),printf(" %30.20f \n", OneSeventh));
-	test(_printf(" %20.f \n",  OneSeventh),printf(" %20.f \n", OneSeventh));
+	test(_printf(" %.20f \n",  OneSeventh),printf(" %.20f \n", OneSeventh));
+	test(_printf("%.*f\n",2,2.0),printf("%.*f\n",2,2.0));
 	test(_printf("%.*f\n",20,OneSeventh),printf("%.*f\n",20, OneSeventh));
  	printf("----test finished----\n");
  	return (0);

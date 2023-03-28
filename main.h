@@ -61,6 +61,7 @@ struct format_info
 	char show_sign;
 	char group;
 	char pad;
+	char star;
 };
 typedef struct format_info fmt_info_t;
 /**
