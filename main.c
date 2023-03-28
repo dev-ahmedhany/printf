@@ -3,43 +3,114 @@
 #include "main.h"
 
 /**
+ * test - test function
+ * @len1: length of string
+ * @len2: length of string
+ */
+void test(int len1, int len2);
+
+/**
  * main - Entry point
  *
  * Return: Always 0
  */
 int main(void)
 {
-	int len;
-	int len2;
-	unsigned int ui;
-	void *addr;
-
-	_printf("%b\n", 98);
-	len = _printf("Let's try to printf a simple sentence.\n");
-	len2 = printf("Let's try to printf a simple sentence.\n");
-	ui = (unsigned int)INT_MAX + 1024;
-	addr = (void *)0x7ffe637541f0;
-	_printf("Length:[%d, %i]\n", len, len);
-	printf("Length:[%d, %i]\n", len2, len2);
-	_printf("Negative:[%d]\n", -762534);
-	printf("Negative:[%d]\n", -762534);
-	_printf("Unsigned:[%u]\n", ui);
-	printf("Unsigned:[%u]\n", ui);
-	_printf("Unsigned octal:[%o]\n", ui);
-	printf("Unsigned octal:[%o]\n", ui);
-	_printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-	printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-	_printf("Character:[%c]\n", 'H');
-	printf("Character:[%c]\n", 'H');
-	_printf("String:[%s]\n", "I am a string !");
-	printf("String:[%s]\n", "I am a string !");
-	_printf("%S\n", "Best\nSchool");
-	printf("%s\n", "Best\\x0ASchool");
-	_printf("Address:[%p]\n", addr);
-	printf("Address:[%p]\n", addr);
-	len = _printf("Percent:[%%]\n");
-	len2 = printf("Percent:[%%]\n");
-	_printf("Len:[%d]\n", len);
-	printf("Len:[%d]\n", len2);
+	printf("----positive sign (+) Flag Tests----\n");	
+	test(_printf(" %+d \n", 0),printf(" %+d \n", 0));
+	test(_printf(" %+d \n", -1),printf(" %+d \n", -1));
+	test(_printf(" %+d \n", 9),printf(" %+d \n", 9));
+	test(_printf(" %+d \n", 10),printf(" %+d \n", 10));
+	test(_printf(" %+d \n", 11),printf(" %+d \n", 11));
+	test(_printf(" %+d \n", 15),printf(" %+d \n", 15));
+	test(_printf(" %+d \n", 16),printf(" %+d \n", 16));
+	test(_printf(" %+d \n", 17),printf(" %+d \n", 17));
+	test(_printf(" %+d \n", 99),printf(" %+d \n", 99));
+	test(_printf(" %+d \n", 100),printf(" %+d \n", 100));
+	test(_printf(" %+d \n", 101),printf(" %+d \n", 101));
+	test(_printf(" %+d \n", -9),printf(" %+d \n", -9));
+	printf("----space ( ) Flag Tests----\n");
+	test(_printf(" % d \n", 0),printf(" % d \n", 0));
+	test(_printf(" % d \n", -1),printf(" % d \n", -1));
+	test(_printf(" % d \n", 1),printf(" % d \n", 1));
+	test(_printf(" % d \n", 9),printf(" % d \n", 9));
+	test(_printf(" % d \n", 10),printf(" % d \n", 10));
+	test(_printf(" % d \n", 11),printf(" % d \n", 11));
+	test(_printf(" % d \n", 15),printf(" % d \n", 15));
+	test(_printf(" % d \n", 16),printf(" % d \n", 16));
+	test(_printf(" % d \n", 17),printf(" % d \n", 17));
+	test(_printf(" % d \n", 99),printf(" % d \n", 99));
+	test(_printf(" % d \n", 100),printf(" % d \n", 100));
+	test(_printf(" % d \n", 101),printf(" % d \n", 101));
+	test(_printf(" % d \n", -9),printf(" % d \n", -9));
+	test(_printf(" % d \n", -10),printf(" % d \n", -10));
+	test(_printf(" % d \n", -11),printf(" % d \n", -11));
+	test(_printf(" % d \n", -15),printf(" % d \n", -15));
+	test(_printf(" % d \n", -16),printf(" % d \n", -16));
+	test(_printf(" % d \n", -17),printf(" % d \n", -17));
+	test(_printf(" % d \n", -99),printf(" % d \n", -99));
+	test(_printf(" % d \n", -100),printf(" % d \n", -100));
+	test(_printf(" % d \n", -101),printf(" % d \n", -101));
+	test(_printf(" % d \n", 2147483647),printf(" % d \n", 2147483647));
+	test(_printf(" % d \n", -2147483647),printf(" % d \n", -2147483647));
+	printf("----Hash Flag Tests----\n");
+	test(_printf(" %#x \n", 0),printf(" %#x \n", 0));
+	test(_printf(" %#x \n", -1),printf(" %#x \n", -1));
+	test(_printf(" %#x \n", 1),printf(" %#x \n", 1));
+	test(_printf(" %#x \n", 9),printf(" %#x \n", 9));
+	test(_printf(" %#x \n", 10),printf(" %#x \n", 10));
+	test(_printf(" %#x \n", 11),printf(" %#x \n", 11));
+	test(_printf(" %#x \n", 15),printf(" %#x \n", 15));
+	test(_printf(" %#x \n", 16),printf(" %#x \n", 16));
+	test(_printf(" %#x \n", 17),printf(" %#x \n", 17));
+	test(_printf(" %#x \n", 99),printf(" %#x \n", 99));
+	test(_printf(" %#x \n", 100),printf(" %#x \n", 100));
+	test(_printf(" %#x \n", 101),printf(" %#x \n", 101));
+	test(_printf(" %#x \n", -9),printf(" %#x \n", -9));
+	test(_printf(" %#x \n", -10),printf(" %#x \n", -10));
+	test(_printf(" %#x \n", -11),printf(" %#x \n", -11));
+	test(_printf(" %#x \n", -14),printf(" %#x \n", -14));
+	test(_printf(" %#x \n", -15),printf(" %#x \n", -15));
+	test(_printf(" %#x \n", -16),printf(" %#x \n", -16));
+	test(_printf(" %#x \n", -17),printf(" %#x \n", -17));
+	test(_printf(" %#x \n", -99),printf(" %#x \n", -99));
+	test(_printf(" %#x \n", -100),printf(" %#x \n", -100));
+	test(_printf(" %#x \n", -101),printf(" %#x \n", -101));
+	test(_printf(" %#x \n", 2147483647),printf(" %#x \n", 2147483647));
+	test(_printf(" %#x \n", -2147483647),printf(" %#x \n", -2147483647));
+	test(_printf(" %#X \n", 0),printf(" %#X \n", 0));
+	test(_printf(" %#X \n", -1),printf(" %#X \n", -1));
+	test(_printf(" %#X \n", 1),printf(" %#X \n", 1));
+	test(_printf(" %#X \n", 9),printf(" %#X \n", 9));
+	test(_printf(" %#X \n", 10),printf(" %#X \n", 10));
+	test(_printf(" %#X \n", 11),printf(" %#X \n", 11));
+	test(_printf(" %#X \n", 15),printf(" %#X \n", 15));
+	test(_printf(" %#X \n", 16),printf(" %#X \n", 16));
+	test(_printf(" %#X \n", 17),printf(" %#X \n", 17));
+	test(_printf(" %#X \n", 99),printf(" %#X \n", 99));
+	test(_printf(" %#X \n", 100),printf(" %#X \n", 100));
+	test(_printf(" %#X \n", 101),printf(" %#X \n", 101));
+	test(_printf(" %#X \n", -9),printf(" %#X \n", -9));
+	test(_printf(" %#X \n", -10),printf(" %#X \n", -10));
+	test(_printf(" %#X \n", -11),printf(" %#X \n", -11));
+	test(_printf(" %#X \n", -14),printf(" %#X \n", -14));
+	test(_printf(" %#X \n", -15),printf(" %#X \n", -15));
+	test(_printf(" %#X \n", -16),printf(" %#X \n", -16));
+	test(_printf(" %#X \n", -17),printf(" %#X \n", -17));
+	test(_printf(" %#X \n", -99),printf(" %#X \n", -99));
+	test(_printf(" %#X \n", -100),printf(" %#X \n", -100));
+	test(_printf(" %#X \n", -101),printf(" %#X \n", -101));
+	test(_printf(" %#X \n", 2147483647),printf(" %#X \n", 2147483647));
+	test(_printf(" %#X \n", -2147483647),printf(" %#X \n", -2147483647));
+	printf("----test finished----\n");
 	return (0);
+}
+
+
+void test(int len1, int len2)
+{
+	if (len1 != len2)
+	{
+		printf("error here len1=%d, len2=%d", len1, len2);
+	}
 }
