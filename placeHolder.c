@@ -66,9 +66,7 @@ int substituteFormat(const char *str, va_list list, int *i)
 	}
 
 	if (str[*i] == '%')
-	{
-		return _putchar('%');
-	}
+		return (_putchar('%'));
 
 	while (get_flag(str[*i], &flags))
 		(*i)++;
@@ -78,7 +76,7 @@ int substituteFormat(const char *str, va_list list, int *i)
 	{
 		if (str[*i] == formats[j].type)
 		{
-			return formats[j].f(list, &flags);
+			return (formats[j].f(list, &flags));
 		}
 	}
 
