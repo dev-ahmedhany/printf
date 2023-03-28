@@ -21,14 +21,13 @@ int findPlaceHolder(const char *str, va_list list)
 				return (-1);
 
 			size += aux;
-			continue;
 		}
-
-		_putchar(str[i]);
-		size = size + 1;
+		else
+		{
+			size += _putchar(str[i]);
+		}
 	}
 	_putchar(-1);
-
 
 	return (size);
 }
@@ -44,14 +43,22 @@ int findPlaceHolder(const char *str, va_list list)
 int substituteFormat(const char *str, va_list list, int *i)
 {
 	int size, j, number_formats;
+	flags_t flags = {0, 0, 0};
+
 	format formats[] = {
-		{'s', printf_string}, {'c', printf_char},
+		{'s', printf_string},
+		{'c', printf_char},
 		{'S', print_bigS},
-		{'b', printf_binary}, {'p', printf_pointer},
-		{'R', printf_rot13}, {'r', printf_rev_string},
-		{'d', printf_integer}, {'i', printf_integer},
-		{'o', printf_octal}, {'x', printf_hex_lower},
-		{'X', printf_hex_upper}, {'u', printf_unsigned}
+		{'b', printf_binary},
+		{'p', printf_pointer},
+		{'R', printf_rot13},
+		{'r', printf_rev_string},
+		{'d', printf_integer},
+		{'i', printf_integer},
+		{'o', printf_octal},
+		{'x', printf_hex_lower},
+		{'X', printf_hex_upper},
+		{'u', printf_unsigned}
 	};
 
 	(*i)++;
@@ -66,12 +73,15 @@ int substituteFormat(const char *str, va_list list, int *i)
 		return (1);
 	}
 
+	while (get_flag(str[*i], &flags))
+		(*i)++;
+
 	number_formats = sizeof(formats) / sizeof(formats[0]);
 	for (size = j = 0; j < number_formats; j++)
 	{
 		if (str[*i] == formats[j].type)
 		{
-			size = formats[j].f(list);
+			size = formats[j].f(list, &flags);
 			return (size);
 		}
 

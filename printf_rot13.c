@@ -5,7 +5,7 @@
  * Return: counter
  *
  */
-int printf_rot13(va_list list)
+int printf_rot13(va_list list, flags_t *f)
 {
 	int i, j, counter = 0;
 	int k = 0;
@@ -13,6 +13,8 @@ int printf_rot13(va_list list)
 	char normal[] = {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
 	char rot13[] = {"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
 
+	(void)f;
+	
 	if (s == NULL)
 		s = "(null)";
 	for (i = 0; s[i]; i++)

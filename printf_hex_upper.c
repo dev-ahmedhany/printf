@@ -9,10 +9,12 @@ char *string_to_upper(char *);
  *
  * Return: Length of the number
  **/
-int printf_hex_upper(va_list list)
+int printf_hex_upper(va_list list, flags_t *f)
 {
 	char *p_buff;
 	int len, i;
+
+	(void)f;
 
 	p_buff = _itoa(va_arg(list, unsigned int), 16);
 	p_buff = string_to_upper(p_buff);

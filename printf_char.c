@@ -6,9 +6,11 @@
  *
  * Return: 1
  */
-int printf_char(va_list list)
+int printf_char(va_list list, flags_t *f)
 {
 	int aux;
+
+	(void)f;
 
 	aux = va_arg(list, int);
 

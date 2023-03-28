@@ -6,17 +6,20 @@
  *
  * Return: Length of th numbers in decimal
  **/
-int printf_integer(va_list list)
+int printf_integer(va_list list, flags_t *f)
 {
-	char *p_buff;
-	int len, i;
+	int n = va_arg(list, int);
+	char *p_buff = _itoa(n, 10);
+	int len = _strlen(p_buff), i;
+	int res = len;
 
-	p_buff = _itoa(va_arg(list, int), 10);
-
-	len = _strlen(p_buff);
+	if (f->space == 1 && f->plus == 0 && n >= 0)
+		res += _putchar(' ');
+	if (f->plus == 1 && n >= 0)
+		res += _putchar('+');
 
 	for (i = 0 ; i < len ; i++)
 		_putchar(p_buff[i]);
 
-	return (len);
+	return (res);
 }

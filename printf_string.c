@@ -5,11 +5,13 @@
  * Return: the length of the string.
  */
 
-int printf_string(va_list list)
+int printf_string(va_list list, flags_t *f)
 {
 	char *s;
 	int i, len;
 
+	(void)f;
+	
 	s = va_arg(list, char *);
 	if (s == NULL)
 	{

@@ -10,11 +10,13 @@
  * if a flag is passed to _printf
  * Return: number of char printed
  */
-int print_bigS(va_list l)
+int print_bigS(va_list l, flags_t *f)
 {
 	int i, count = 0;
 	char *res;
 	char *s = va_arg(l, char *);
+
+	(void)f;
 
 	if (!s)
 		return (_puts("(null)"));

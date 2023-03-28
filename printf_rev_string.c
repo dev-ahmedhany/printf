@@ -6,10 +6,12 @@
  *
  * Return: Length of the string
  **/
-int  printf_rev_string(va_list list)
+int  printf_rev_string(va_list list, flags_t *f)
 {
 	int i, size;
 	const char *str;
+
+	(void)f;
 
 	str = va_arg(list, const char *);
 

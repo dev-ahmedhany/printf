@@ -6,10 +6,12 @@
  *
  * Return: Length of the number
  **/
-int printf_unsigned(va_list list)
+int printf_unsigned(va_list list, flags_t *f)
 {
 	char *p_buff;
 	int len, i;
+
+	(void)f;
 
 	p_buff = _itoa(va_arg(list, unsigned int), 10);
 
