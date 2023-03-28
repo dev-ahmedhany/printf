@@ -16,7 +16,7 @@
   */
  int main(void)
  {
-		double OneSeventh = 1.0/7.0;
+	double OneSeventh =987654321123 + 1.0/7.0;
 	printf("----original Test Cases----\n");
 	test(_printf("Let's try to printf a simple sentence.\n"),printf("Let's try to printf a simple sentence.\n"));
 	test(_printf("Negative:[%d]\n", -762534),printf("Negative:[%d]\n", -762534));
@@ -114,8 +114,10 @@
  	test(_printf(" %#X \n", 2147483647),printf(" %#X \n", 2147483647));
  	test(_printf(" %#X \n", -2147483647),printf(" %#X \n", -2147483647));
  	printf("----Precision test cases----\n");
-	test(_printf(" %.0d \n", 0),printf(" %.0d \n", 0));
-	test(_printf("%.f\n",55,OneSeventh),printf("%.*f\n",55, OneSeventh));
+	test(_printf(" %10.4f \n",  OneSeventh),printf(" %10.4f \n", OneSeventh));
+	test(_printf(" %30.20f \n",  OneSeventh),printf(" %30.20f \n", OneSeventh));
+	test(_printf(" %20.f \n",  OneSeventh),printf(" %20.f \n", OneSeventh));
+	test(_printf("%.*f\n",20,OneSeventh),printf("%.*f\n",20, OneSeventh));
  	printf("----test finished----\n");
  	return (0);
  }
@@ -125,6 +127,6 @@
  {
  	if (len1 != len2)
  	{
- 		printf("error here len1=%d, len2=%d", len1, len2);
+ 		printf("error here len1=%d, len2=%d\n", len1, len2);
  	}
  }
