@@ -17,7 +17,8 @@ int findPlaceHolder(const char *str, va_list list)
 		if (str[i] == '%')
 		{
 			aux = substituteFormat(str, list, &i);
-			if (aux == -1){
+			if (aux == -1)
+			{
 				return (-1);
 			}
 
@@ -71,7 +72,8 @@ int substituteFormat(const char *str, va_list list, int *i)
 	number_formats = sizeof(formats) / sizeof(formats[0]);
 	for (j = 0; j < number_formats; j++)
 	{
-		if (str[*i] == formats[j].type){
+		if (str[*i] == formats[j].type)
+		{
 			return formats[j].f(list, &flags);
 		}
 	}
