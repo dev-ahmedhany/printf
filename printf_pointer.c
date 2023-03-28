@@ -5,6 +5,8 @@ int dec_to_hex(unsigned long int);
 /**
  * printf_pointer - prints an hexadecimal number.
  * @list: arguments.
+ * @f: flags.
+ * 
  * Return: counter.
  */
 int printf_pointer(va_list list, flags_t *f)

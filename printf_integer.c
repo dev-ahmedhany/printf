@@ -3,6 +3,7 @@
 /**
  * printf_integer - Print a number in base 10
  * @list: Number to print in base 10
+ * @f: flags.
  *
  * Return: Length of th numbers in decimal
  **/

@@ -3,6 +3,7 @@
 /**
  * printf_hex_lower - Print a number in hexadecimal format
  * @list: Number to print
+ * @f: flags.
  *
  * Return: Length of the number
  **/

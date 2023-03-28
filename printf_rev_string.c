@@ -3,6 +3,7 @@
 /**
  * printf_rev_string - Print a string in reverse
  * @list: List of arguments
+ * @f: flags.
  *
  * Return: Length of the string
  **/

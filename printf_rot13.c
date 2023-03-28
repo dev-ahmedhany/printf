@@ -2,6 +2,7 @@
 /**
  * printf_rot13 - printf str to ROT13 place into buffer
  * @list: type struct va_arg where is allocated printf arguments
+ * @f: flags.
  * Return: counter
  *
  */
@@ -14,7 +15,7 @@ int printf_rot13(va_list list, flags_t *f)
 	char rot13[] = {"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
 
 	(void)f;
-	
+
 	if (s == NULL)
 		s = "(null)";
 	for (i = 0; s[i]; i++)

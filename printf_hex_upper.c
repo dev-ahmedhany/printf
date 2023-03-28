@@ -6,6 +6,7 @@ char *string_to_upper(char *);
 /**
  * printf_hex_upper - Print a number in hexadecimal format
  * @list: Number to print
+ * @f: flags.
  *
  * Return: Length of the number
  **/

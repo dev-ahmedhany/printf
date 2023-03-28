@@ -3,6 +3,7 @@
 /**
  * printf_char - print char.
  * @list: va_list.
+ * @f: flags.
  *
  * Return: 1
  */

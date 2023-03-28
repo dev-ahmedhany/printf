@@ -2,6 +2,7 @@
 /**
  * printf_string - print a string.
  * @list: argument.
+ * @f: flags.
  * Return: the length of the string.
  */
 
@@ -11,7 +12,7 @@ int printf_string(va_list list, flags_t *f)
 	int i, len;
 
 	(void)f;
-	
+
 	s = va_arg(list, char *);
 	if (s == NULL)
 	{

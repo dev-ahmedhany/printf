@@ -3,6 +3,7 @@
 /**
  * printf_binary - Print a number in base 2
  * @list: Number to print in base 2
+ * @f: flags.
  *
  * Return: Length of the numbers in binary
  **/
