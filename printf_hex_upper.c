@@ -12,19 +12,20 @@ char *string_to_upper(char *);
 int printf_hex_upper(va_list list, flags_t *f)
 {
 	char *p_buff;
-	int len, i;
-
-	(void)f;
+	int len, i, count = 0;
 
 	p_buff = _itoa(va_arg(list, unsigned int), 16);
 	p_buff = string_to_upper(p_buff);
 
 	len = _strlen(p_buff);
 
-	for (i = 0 ; i < len ; i++)
-		_putchar(p_buff[i]);
+	if (f->hash == 1 && p_buff[0] != '0')
+		count += _puts("0X");
 
-	return (len);
+	for (i = 0 ; i < len ; i++)
+		count += _putchar(p_buff[i]);
+
+	return (count);
 }
 
 /**
