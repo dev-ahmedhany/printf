@@ -139,3 +139,7 @@ You don’t have to handle the flag characters
 You don’t have to handle field width
 You don’t have to handle precision
 You don’t have to handle the length modifiers
+
+### 4. Nothing in fine print is ever good news
+
+Use a local buffer of 1024 chars in order to call write as little as possible.
