@@ -167,7 +167,7 @@ _printf("Wind: %d%s and Precipitation: %d%%\\n", 28, "km/h", 0x1a);
 
 .SH
 Authors
-Written by Bezaleel Olakunori and Obed Amoako
+Written by Ahmed Hany and Menna Mohamed
 
 .SH Reporting Bugs
 Report
