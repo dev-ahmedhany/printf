@@ -43,7 +43,7 @@ int findPlaceHolder(const char *str, va_list list)
  **/
 int substituteFormat(const char *str, va_list list, int *i)
 {
-	int size, j, number_formats;
+	int j, number_formats;
 	flags_t flags = {0, 0, 0};
 
 	format formats[] = {
@@ -69,7 +69,7 @@ int substituteFormat(const char *str, va_list list, int *i)
 		(*i)++;
 
 	number_formats = sizeof(formats) / sizeof(formats[0]);
-	for (size = j = 0; j < number_formats; j++)
+	for (j = 0; j < number_formats; j++)
 	{
 		if (str[*i] == formats[j].type){
 			return formats[j].f(list, &flags);
