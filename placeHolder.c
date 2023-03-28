@@ -61,10 +61,14 @@ int substituteFormat(const char *str, va_list list, int *i)
 
 
 	if (str[*i] == '\0')
+	{
 		return (-1);
+	}
 
 	if (str[*i] == '%')
+	{
 		return _putchar('%');
+	}
 
 	while (get_flag(str[*i], &flags))
 		(*i)++;
