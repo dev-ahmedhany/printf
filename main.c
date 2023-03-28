@@ -13,8 +13,7 @@ int main(void)
 	int len2;
 	unsigned int ui;
 	void *addr;
-    
-       
+
 	_printf("%b\n", 98);
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
