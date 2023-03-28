@@ -93,7 +93,7 @@ void set_precision(const char *str, va_list args,
 	else if (is_specifier(*(str + *i)))
 	{
 		fmt_info->prec = 0;
-		/* (*i)--; */
+		(*i)--;
 	}
 	else
 	{
