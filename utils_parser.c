@@ -126,7 +126,8 @@ int read_format_info(const char *str, va_list args,
 		}
 		else if ((is_digit(*(str + i)) || *(str + i) == '*') && order < 2)
 		{
-			if (*(str + i) == '*'){
+			if (*(str + i) == '*')
+			{
 				fmt_info->width = va_arg(args, int), i++;
 				fmt_info->star = TRUE;
 			}

@@ -42,6 +42,7 @@
  * @show_sign: Specifies the presence of the '+' flag
  * @group: The current locale's digit separator for integers
  * @pad: This is the character to use for padding the output
+ * @star: Specifies the presence of a '*' in the format
  */
 struct format_info
 {

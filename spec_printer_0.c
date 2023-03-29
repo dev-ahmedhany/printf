@@ -60,9 +60,9 @@ void convert_fmt_c(va_list *args_list, fmt_info_t *fmt_info)
 {
 	int i, len = 1;
 	char str;
-	if(fmt_info->star){
+
+	if (fmt_info->star)
 		va_arg(*args_list, int);
-	}
 
 	str = va_arg(*args_list, int);
 
@@ -90,9 +90,9 @@ void convert_fmt_s(va_list *args_list, fmt_info_t *fmt_info)
 	char *str;
 	char null_str[] = "(null)";
 
-	if(fmt_info->star){
+	if (fmt_info->star)
 		va_arg(*args_list, int);
-	}
+
 	str = va_arg(*args_list, char *);
 
 	str = str ? str : null_str;

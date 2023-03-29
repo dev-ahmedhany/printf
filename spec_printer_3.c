@@ -19,9 +19,8 @@ void convert_fmt_fF(va_list *args_list, fmt_info_t *fmt_info)
 	ushort_t mant_size = fmt_info->is_long_double ? 64 : 52;
 	float_info_t *flt_info;
 
-	if(fmt_info->star){
+	if (fmt_info->star)
 		num = va_arg(*args_list, double);
-	}
 
 	flt_info = new_float_info(exp_size, mant_size);
 	if (flt_info != NULL)

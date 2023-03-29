@@ -16,9 +16,9 @@ void convert_fmt_di(va_list *args_list, fmt_info_t *fmt_info)
 	long num;
 	char *str, inv_plus;
 
-	if(fmt_info->star){
+	if (fmt_info->star)
 		va_arg(*args_list, int);
-	}
+
 	if (fmt_info->is_long)
 		num = va_arg(*args_list, long);
 	else if (fmt_info->is_short)
@@ -70,9 +70,8 @@ void convert_fmt_xX(va_list *args_list, fmt_info_t *fmt_info)
 	unsigned long num;
 	char *str;
 
-	if(fmt_info->star){
+	if (fmt_info->star)
 		va_arg(*args_list, int);
-	}
 
 	if (fmt_info->is_short)
 		num = (va_arg(*args_list, unsigned long) << 2 * 8) >> 2 * 8;
@@ -123,9 +122,8 @@ void convert_fmt_o(va_list *args_list, fmt_info_t *fmt_info)
 	unsigned long num;
 	char *str;
 
-	if(fmt_info->star){
+	if (fmt_info->star)
 		va_arg(*args_list, int);
-	}
 
 	if (fmt_info->is_long)
 		num = va_arg(*args_list, unsigned long);
@@ -173,9 +171,8 @@ void convert_fmt_u(va_list *args_list, fmt_info_t *fmt_info)
 	unsigned long num, max_w, max_p;
 	char *str;
 
-	if(fmt_info->star){
+	if (fmt_info->star)
 		va_arg(*args_list, int);
-	}
 
 	if (fmt_info->is_long)
 		num = va_arg(*args_list, unsigned long);
