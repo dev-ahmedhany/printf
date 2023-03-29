@@ -17,6 +17,8 @@ int _printf(const char *format, ...)
 	fmt_info_t fmt_info;
 	va_list args;
 
+	fmt_info.star = 0;
+
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	va_start(args, format);

@@ -59,7 +59,12 @@ void convert_fmt_p(va_list *args_list, fmt_info_t *fmt_info)
 void convert_fmt_c(va_list *args_list, fmt_info_t *fmt_info)
 {
 	int i, len = 1;
-	char str = va_arg(*args_list, int);
+	char str;
+	if(fmt_info->star){
+		va_arg(*args_list, int);
+	}
+
+	str = va_arg(*args_list, int);
 
 	if (!fmt_info->left)
 	{
@@ -82,8 +87,13 @@ void convert_fmt_c(va_list *args_list, fmt_info_t *fmt_info)
 void convert_fmt_s(va_list *args_list, fmt_info_t *fmt_info)
 {
 	int i, len;
-	char *str = va_arg(*args_list, char *);
+	char *str;
 	char null_str[] = "(null)";
+
+	if(fmt_info->star){
+		va_arg(*args_list, int);
+	}
+	str = va_arg(*args_list, char *);
 
 	str = str ? str : null_str;
 	len = fmt_info->is_precision_set && fmt_info->prec >= 0

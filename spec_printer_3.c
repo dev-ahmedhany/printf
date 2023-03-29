@@ -19,6 +19,10 @@ void convert_fmt_fF(va_list *args_list, fmt_info_t *fmt_info)
 	ushort_t mant_size = fmt_info->is_long_double ? 64 : 52;
 	float_info_t *flt_info;
 
+	if(fmt_info->star){
+		num = va_arg(*args_list, double);
+	}
+
 	flt_info = new_float_info(exp_size, mant_size);
 	if (flt_info != NULL)
 	{
@@ -32,13 +36,13 @@ void convert_fmt_fF(va_list *args_list, fmt_info_t *fmt_info)
 			max_w = MAX(fmt_info->width, num_len);
 			zeros_count = (max_w - num_len) * !fmt_info->left * (fmt_info->pad == '0');
 			len = max_w - (zeros_count + num_len);
-			for (i = 0; !fmt_info->left && i < len; i++)
+			for (i = fmt_info->prec == 0 ? -1 : 0; !fmt_info->left && i < len; i++)
 				_putchar(' ');
 			if (has_sign)
 				_putchar(num < 0 ? '-' : '+');
 			for (i = 0; !fmt_info->left && i < zeros_count; i++)
 				_putchar('0');
-			for (i = has_sign ? 1 : 0; *(str + i) != '\0'; i++)
+			for (i = has_sign ? 1 : 0; *(str + i + (fmt_info->prec == 0 ? 1 : 0)) != '\0'; i++)
 				_putchar(*(str + i));
 			for (i = 0; fmt_info->left && i < len; i++)
 				_putchar(' ');
