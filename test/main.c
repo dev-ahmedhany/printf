@@ -597,93 +597,170 @@ void e287() { printf("In the middle %*s of a sentence.\n", 6, "Hey");}
 //test 10
 void c288() {_printf("%.6d", 102498402);}
 void e288() { printf("%.6d", 102498402);}
-
-/*
-_printf("%.6d", 102498402);
-_printf("%.6d", -102498402);
-_printf("%.6d", 0);
-_printf("%.6d", 1024);
-_printf("%.6d", -1024);
-_printf("In the middle %.6d of a sentence.\n", 1024);
-_printf("%.0d", 0);
-_printf("%.d", 0);
-_printf("%.6i", 102498402);
-_printf("%.6i", -102498402);
-_printf("%.6i", 0);
-_printf("%.6i", 1024);
-_printf("%.6i", -1024);
-_printf("In the middle %.6i of a sentence.\n", 1024);
-_printf("%.0i", 0);
-_printf("%.i", 0);
-_printf("%.6u", 102498402);
-_printf("%.6u", 0);
-_printf("%.6u", 1024);
-_printf("In the middle %.6u of a sentence.\n", 1024);
-_printf("%.0u", 0);
-_printf("%.u", 0);
-_printf("%.6o", 102498402);
-_printf("%.6o", 0);
-_printf("%.6o", 1024);
-_printf("In the middle %.6o of a sentence.\n", 1024);
-_printf("%.0o", 0);
-_printf("%.o", 0);
-_printf("%.6x", 102498402);
-_printf("%.6x", 0);
-_printf("%.6x", 1024);
-_printf("In the middle %.6x of a sentence.\n", 1024);
-_printf("%.0x", 0);
-_printf("%.x", 0);
-_printf("%.6X", 102498402);
-_printf("%.6X", 0);
-_printf("%.6X", 1024);
-_printf("In the middle %.6X of a sentence.\n", 1024);
-_printf("%.0X", 0);
-_printf("%.X", 0);
-_printf("%.6s", "Best School !\n");
-_printf("%.6s", "Hi!\n");
-_printf("%.0s", "Hi!\n");
-_printf("%.s", "Hi!\n");
-_printf("In the middle %.6s of a sentence.\n", "Best!");
-_printf("%.*d", 6, 102498402);
-_printf("%.*d", 6, -102498402);
-_printf("%.*d", 6, 0);
-_printf("%.*d", 6, 1024);
-_printf("%.*d", 6, -1024);
-_printf("In the middle %.*d of a sentence.\n", 6, 1024);
-_printf("%.*d", 0, 0);
-_printf("%.*i", 6, 102498402);
-_printf("%.*i", 6, -102498402);
-_printf("%.*i", 6, 0);
-_printf("%.*i", 6, 1024);
-_printf("%.*i", 6, -1024);
-_printf("In the middle %.*i of a sentence.\n", 6, 1024);
-_printf("%.*i", 0, 0);
-_printf("%.*u", 6, 102498402);
-_printf("%.*u", 6, 0);
-_printf("%.*u", 6, 1024);
-_printf("In the middle %.*u of a sentence.\n", 6, 1024);
-_printf("%.*u", 0, 0);
-_printf("%.*o", 6, 102498402);
-_printf("%.*o", 6, 0);
-_printf("%.*o", 6, 1024);
-_printf("In the middle %.*o of a sentence.\n", 6, 1024);
-_printf("%.*o", 0, 0);
-_printf("%.*x", 6, 102498402);
-_printf("%.*x", 6, 0);
-_printf("%.*x", 6, 1024);
-_printf("In the middle %.*x of a sentence.\n", 6, 1024);
-_printf("%.*x", 0, 0);
-_printf("%.*X", 6, 102498402);
-_printf("%.*X", 6, 0);
-_printf("%.*X", 6, 1024);
-_printf("In the middle %.*X of a sentence.\n", 6, 1024);
-_printf("%.*X", 0, 0);
-_printf("%.*s", 6, "Best School !\n");
-_printf("%.*s", 6, "Hi!\n");
-_printf("%.*s", 0, "Hi!\n");
-_printf("In the middle %.*s of a sentence.\n", 6, "Best!");
-
-*/
+void c289() {_printf("%.6d", -102498402);}
+void e289() { printf("%.6d", -102498402);}
+void c290() {_printf("%.6d", 0);}
+void e290() { printf("%.6d", 0);}
+void c291() {_printf("%.6d", 1024);}
+void e291() { printf("%.6d", 1024);}
+void c292() {_printf("%.6d", -1024);}
+void e292() { printf("%.6d", -1024);}
+void c293() {_printf("In the middle %.6d of a sentence.\n", 1024);}
+void e293() { printf("In the middle %.6d of a sentence.\n", 1024);}
+void c294() {_printf("%.0d", 0);}
+void e294() { printf("%.0d", 0);}
+void c295() {_printf("%.d", 0);}
+void e295() { printf("%.d", 0);}
+void c296() {_printf("%.6i", 102498402);}
+void e296() { printf("%.6i", 102498402);}
+void c297() {_printf("%.6i", -102498402);}
+void e297() { printf("%.6i", -102498402);}
+void c298() {_printf("%.6i", 0);}
+void e298() { printf("%.6i", 0);}
+void c299() {_printf("%.6i", 1024);}
+void e299() { printf("%.6i", 1024);}
+void c300() {_printf("%.6i", -1024);}
+void e300() { printf("%.6i", -1024);}
+void c301() {_printf("In the middle %.6i of a sentence.\n", 1024);}
+void e301() { printf("In the middle %.6i of a sentence.\n", 1024);}
+void c302() {_printf("%.0i", 0);}
+void e302() { printf("%.0i", 0);}
+void c303() {_printf("%.i", 0);}
+void e303() { printf("%.i", 0);}
+void c304() {_printf("%.6u", 102498402);}
+void e304() { printf("%.6u", 102498402);}
+void c305() {_printf("%.6u", 0);}
+void e305() { printf("%.6u", 0);}
+void c306() {_printf("%.6u", 1024);}
+void e306() { printf("%.6u", 1024);}
+void c307() {_printf("In the middle %.6u of a sentence.\n", 1024);}
+void e307() { printf("In the middle %.6u of a sentence.\n", 1024);}
+void c308() {_printf("%.0u", 0);}
+void e308() { printf("%.0u", 0);}
+void c309() {_printf("%.u", 0);}
+void e309() { printf("%.u", 0);}
+void c310() {_printf("%.6o", 102498402);}
+void e310() { printf("%.6o", 102498402);}
+void c311() {_printf("%.6o", 0);}
+void e311() { printf("%.6o", 0);}
+void c312() {_printf("%.6o", 1024);}
+void e312() { printf("%.6o", 1024);}
+void c313() {_printf("In the middle %.6o of a sentence.\n", 1024);}
+void e313() { printf("In the middle %.6o of a sentence.\n", 1024);}
+void c314() {_printf("%.0o", 0);}
+void e314() { printf("%.0o", 0);}
+void c315() {_printf("%.o", 0);}
+void e315() { printf("%.o", 0);}
+void c316() {_printf("%.6x", 102498402);}
+void e316() { printf("%.6x", 102498402);}
+void c317() {_printf("%.6x", 0);}
+void e317() { printf("%.6x", 0);}
+void c318() {_printf("%.6x", 1024);}
+void e318() { printf("%.6x", 1024);}
+void c319() {_printf("In the middle %.6x of a sentence.\n", 1024);}
+void e319() { printf("In the middle %.6x of a sentence.\n", 1024);}
+void c320() {_printf("%.0x", 0);}
+void e320() { printf("%.0x", 0);}
+void c321() {_printf("%.x", 0);}
+void e321() { printf("%.x", 0);}
+void c322() {_printf("%.6X", 102498402);}
+void e322() { printf("%.6X", 102498402);}
+void c323() {_printf("%.6X", 0);}
+void e323() { printf("%.6X", 0);}
+void c324() {_printf("%.6X", 1024);}
+void e324() { printf("%.6X", 1024);}
+void c325() {_printf("In the middle %.6X of a sentence.\n", 1024);}
+void e325() { printf("In the middle %.6X of a sentence.\n", 1024);}
+void c326() {_printf("%.0X", 0);}
+void e326() { printf("%.0X", 0);}
+void c327() {_printf("%.X", 0);}
+void e327() { printf("%.X", 0);}
+void c328() {_printf("%.6s", "Best School !\n");}
+void e328() { printf("%.6s", "Best School !\n");}
+void c329() {_printf("%.6s", "Hi!\n");}
+void e329() { printf("%.6s", "Hi!\n");}
+void c330() {_printf("%.0s", "Hi!\n");}
+void e330() { printf("%.0s", "Hi!\n");}
+void c331() {_printf("%.s", "Hi!\n");}
+void e331() { printf("%.s", "Hi!\n");}
+void c332() {_printf("In the middle %.6s of a sentence.\n", "Best!");}
+void e332() { printf("In the middle %.6s of a sentence.\n", "Best!");}
+void c333() {_printf("%.*d", 6, 102498402);}
+void e333() { printf("%.*d", 6, 102498402);}
+void c334() {_printf("%.*d", 6, -102498402);}
+void e334() { printf("%.*d", 6, -102498402);}
+void c335() {_printf("%.*d", 6, 0);}
+void e335() { printf("%.*d", 6, 0);}
+void c336() {_printf("%.*d", 6, 1024);}
+void e336() { printf("%.*d", 6, 1024);}
+void c337() {_printf("%.*d", 6, -1024);}
+void e337() { printf("%.*d", 6, -1024);}
+void c338() {_printf("In the middle %.*d of a sentence.\n", 6, 1024);}
+void e338() { printf("In the middle %.*d of a sentence.\n", 6, 1024);}
+void c339() {_printf("%.*d", 0, 0);}
+void e339() { printf("%.*d", 0, 0);}
+void c340() {_printf("%.*i", 6, 102498402);}
+void e340() { printf("%.*i", 6, 102498402);}
+void c341() {_printf("%.*i", 6, -102498402);}
+void e341() { printf("%.*i", 6, -102498402);}
+void c342() {_printf("%.*i", 6, 0);}
+void e342() { printf("%.*i", 6, 0);}
+void c343() {_printf("%.*i", 6, 1024);}
+void e343() { printf("%.*i", 6, 1024);}
+void c344() {_printf("%.*i", 6, -1024);}
+void e344() { printf("%.*i", 6, -1024);}
+void c345() {_printf("In the middle %.*i of a sentence.\n", 6, 1024);}
+void e345() { printf("In the middle %.*i of a sentence.\n", 6, 1024);}
+void c346() {_printf("%.*i", 0, 0);}
+void e346() { printf("%.*i", 0, 0);}
+void c347() {_printf("%.*u", 6, 102498402);}
+void e347() { printf("%.*u", 6, 102498402);}
+void c348() {_printf("%.*u", 6, 0);}
+void e348() { printf("%.*u", 6, 0);}
+void c349() {_printf("%.*u", 6, 1024);}
+void e349() { printf("%.*u", 6, 1024);}
+void c350() {_printf("In the middle %.*u of a sentence.\n", 6, 1024);}
+void e350() { printf("In the middle %.*u of a sentence.\n", 6, 1024);}
+void c351() {_printf("%.*u", 0, 0);}
+void e351() { printf("%.*u", 0, 0);}
+void c352() {_printf("%.*o", 6, 102498402);}
+void e352() { printf("%.*o", 6, 102498402);}
+void c353() {_printf("%.*o", 6, 0);}
+void e353() { printf("%.*o", 6, 0);}
+void c354() {_printf("%.*o", 6, 1024);}
+void e354() { printf("%.*o", 6, 1024);}
+void c355() {_printf("In the middle %.*o of a sentence.\n", 6, 1024);}
+void e355() { printf("In the middle %.*o of a sentence.\n", 6, 1024);}
+void c356() {_printf("%.*o", 0, 0);}
+void e356() { printf("%.*o", 0, 0);}
+void c357() {_printf("%.*x", 6, 102498402);}
+void e357() { printf("%.*x", 6, 102498402);}
+void c358() {_printf("%.*x", 6, 0);}
+void e358() { printf("%.*x", 6, 0);}
+void c359() {_printf("%.*x", 6, 1024);}
+void e359() { printf("%.*x", 6, 1024);}
+void c360() {_printf("In the middle %.*x of a sentence.\n", 6, 1024);}
+void e360() { printf("In the middle %.*x of a sentence.\n", 6, 1024);}
+void c361() {_printf("%.*x", 0, 0);}
+void e361() { printf("%.*x", 0, 0);}
+void c362() {_printf("%.*X", 6, 102498402);}
+void e362() { printf("%.*X", 6, 102498402);}
+void c363() {_printf("%.*X", 6, 0);}
+void e363() { printf("%.*X", 6, 0);}
+void c364() {_printf("%.*X", 6, 1024);}
+void e364() { printf("%.*X", 6, 1024);}
+void c365() {_printf("In the middle %.*X of a sentence.\n", 6, 1024);}
+void e365() { printf("In the middle %.*X of a sentence.\n", 6, 1024);}
+void c366() {_printf("%.*X", 0, 0);}
+void e366() { printf("%.*X", 0, 0);}
+void c367() {_printf("%.*s", 6, "Best School !\n");}
+void e367() { printf("%.*s", 6, "Best School !\n");}
+void c368() {_printf("%.*s", 6, "Hi!\n");}
+void e368() { printf("%.*s", 6, "Hi!\n");}
+void c369() {_printf("%.*s", 0, "Hi!\n");}
+void e369() { printf("%.*s", 0, "Hi!\n");}
+void c370() {_printf("In the middle %.*s of a sentence.\n", 6, "Best!");}
+void e370() { printf("In the middle %.*s of a sentence.\n", 6, "Best!");}
 
 
 int main() {
@@ -717,7 +794,15 @@ int main() {
     &c251, &c252, &c253, &c254, &c255, &c256, &c257, &c258, &c259, &c260,
     &c261, &c262, &c263, &c264, &c265, &c266, &c267, &c268, &c269, &c270,
     &c271, &c272, &c273, &c274, &c275, &c276, &c277, &c278, &c279, &c280,
-    &c281, &c282, &c283, &c284, &c285, &c286, &c287, &c288};
+    &c281, &c282, &c283, &c284, &c285, &c286, &c287, &c288, &c289, &c290,
+    &c291, &c292, &c293, &c294, &c295, &c296, &c297, &c298, &c299, &c300,
+    &c301, &c302, &c303, &c304, &c305, &c306, &c307, &c308, &c309, &c310,
+    &c311, &c312, &c313, &c314, &c315, &c316, &c317, &c318, &c319, &c320,
+    &c321, &c322, &c323, &c324, &c325, &c326, &c327, &c328, &c329, &c330,
+    &c331, &c332, &c333, &c334, &c335, &c336, &c337, &c338, &c339, &c340,
+    &c341, &c342, &c343, &c344, &c345, &c346, &c347, &c348, &c349, &c350,
+    &c351, &c352, &c353, &c354, &c355, &c356, &c357, &c358, &c359, &c360,
+    &c361, &c362, &c363, &c364, &c365, &c366, &c367, &c368, &c369, &c370};
                            
   void (*expects[])() = {
     &e0,&e1, &e2, &e3, &e4, &e5, &e6, &e7, &e8, &e9, &e10,
@@ -748,8 +833,16 @@ int main() {
     &e251, &e252, &e253, &e254, &e255, &e256, &e257, &e258, &e259, &e260,
     &e261, &e262, &e263, &e264, &e265, &e266, &e267, &e268, &e269, &e270,
     &e271, &e272, &e273, &e274, &e275, &e276, &e277, &e278, &e279, &e280,
-    &e281, &e282, &e283, &e284, &e285, &e286, &e287, &e288};
-  int breakpoints[] = {0,13,38,46,80,80,86,93,146,220,288};
+    &e281, &e282, &e283, &e284, &e285, &e286, &e287, &e288, &e289, &e290,
+    &e291, &e292, &e293, &e294, &e295, &e296, &e297, &e298, &e299, &e300,
+    &e301, &e302, &e303, &e304, &e305, &e306, &e307, &e308, &e309, &e310,
+    &e311, &e312, &e313, &e314, &e315, &e316, &e317, &e318, &e319, &e320,
+    &e321, &e322, &e323, &e324, &e325, &e326, &e327, &e328, &e329, &e330,
+    &e331, &e332, &e333, &e334, &e335, &e336, &e337, &e338, &e339, &e340,
+    &e341, &e342, &e343, &e344, &e345, &e346, &e347, &e348, &e349, &e350,
+    &e351, &e352, &e353, &e354, &e355, &e356, &e357, &e358, &e359, &e360,
+    &e361, &e362, &e363, &e364, &e365, &e366, &e367, &e368, &e369, &e370};
+  int breakpoints[] = {0,13,38,46,80,80,86,93,146,220,288,371};
   int count = sizeof(checks) / sizeof(checks[0]);
   int breakpointsCount = sizeof(breakpoints) / sizeof(breakpoints[0]);
   for (i = 0; i < count; i++)
