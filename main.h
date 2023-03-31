@@ -104,7 +104,6 @@ char is_letter(char c);
 void set_format_error(const char *, int *, int len, int, int *);
 void _putnum(int zeros_count, long num, char *str);
 
-
 void init_format_info(fmt_info_t *specifier);
 int read_format_info(const char *, va_list, fmt_info_t *, int *);
 fmt_info_t *new_format_info();
