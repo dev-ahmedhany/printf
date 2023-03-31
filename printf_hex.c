@@ -32,7 +32,8 @@ void printf_hex(va_list *args_list, fmt_info_t  *fmt_info)
 		else
 		{
 			num_len = _strlen(str) + (num ? fmt_info->hash * 2 : 0);
-			max_w = MAX(fmt_info->width, num_len), max_p = MAX(fmt_info->precision, num_len);
+			max_w = MAX(fmt_info->width, num_len);
+			max_p = MAX(fmt_info->precision, num_len);
 			zeros_count = (max_p - num_len) * !fmt_info->left_align;
 			len = max_w - (NEG(zeros_count) + num_len);
 			for (i = 0; !fmt_info->left_align && i < len; i++)

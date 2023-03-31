@@ -23,7 +23,7 @@ void printf_unsigned(va_list *args_list, fmt_info_t *fmt_info)
 	str = unsigned_long_to_str(num);
 	if (str)
 	{
-		if (FMT_PREC_EMPTY(fmt_info) && !num)
+		if (fmt_info->is_precision_set && !fmt_info->precision && !num)
 		{
 			print_n_times(' ', fmt_info->width);
 		}

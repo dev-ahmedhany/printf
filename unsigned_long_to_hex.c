@@ -4,7 +4,8 @@
 #include "main.h"
 
 /**
- * unsigned_long_to_hex - Converts an unsigned long to its string representation
+ * unsigned_long_to_hex - Converts an unsigned long
+ * to its string representation
  * @num: The unsigned long number
  * @upper: Specifies whether the hexadecimals should be in uppercase
  *
