@@ -6,13 +6,13 @@
 #include "main.h"
 
 /**
- * _putstr - writes the given string to the buffer
+ * _putstring - writes the given string to the buffer
  * @str: The string to write
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putstr(char *str)
+int _putstring(char *str)
 {
 	int i, out;
 

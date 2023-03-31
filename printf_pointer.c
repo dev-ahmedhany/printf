@@ -34,7 +34,7 @@ void printf_pointer(va_list *args_list, fmt_info_t *fmt_info)
 	}
 	else
 	{
-		_putstr("(nil)");
+		_putstring("(nil)");
 		if (str)
 			free(str);
 	}

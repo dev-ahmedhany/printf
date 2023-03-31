@@ -45,7 +45,7 @@ void printf_S(va_list *args_list, fmt_info_t *fmt_info)
 	}
 	else
 	{
-		_putstr("(null)");
+		_putstring("(null)");
 	}
 }
 

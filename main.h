@@ -93,7 +93,7 @@ typedef struct float_info float_info_t;
 
 
 int _putchar(char c);
-int _putstr(char *str);
+int _putstring(char *str);
 int write_to_buffer(char c, char action);
 int _printf(const char *format, ...);
 void placeHolder(va_list *args_list, fmt_info_t *fmt_info);

@@ -39,7 +39,7 @@ void printf_hex(va_list *args_list, fmt_info_t  *fmt_info)
 			for (i = 0; !fmt_info->left_align && i < len; i++)
 				_putchar(fmt_info->padding);
 			if (fmt_info->hash && num)
-				_putstr(fmt_info->specifier == 'X' ? "0X" : "0x");
+				_putstring(fmt_info->specifier == 'X' ? "0X" : "0x");
 			for (i = 0; i < zeros_count; i++)
 				_putchar('0');
 			for (i = 0; *(str + i) != '\0'; i++)
