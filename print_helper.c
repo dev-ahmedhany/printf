@@ -3,46 +3,16 @@
 #include "main.h"
 
 /**
- * print_repeat - Prints a character n times
+ * print_n_times - Prints a character n times
  * @c: The character to print
  * @n: The number of times to print the character
  */
-void print_repeat(char c, int n)
+void print_n_times(char c, int n)
 {
 	int i;
 
 	for (i = 0; i < n; i++)
 		_putchar(c);
-}
-
-/**
- * _putnchars - Prints multiple characters
- * @n: The number of characters to print
- */
-void _putnchars(int n, ...)
-{
-	int i;
-	va_list args;
-
-	if (n <= 0)
-		return;
-	va_start(args, n);
-	for (i = 0; i < n; i++)
-	{
-		_putchar(va_arg(args, int));
-	}
-	va_end(args);
-}
-
-/**
- * is_letter - Checks if the given character is a letter
- * @c: The character to check
- *
- * Return: 1 or 0
- */
-char is_letter(char c)
-{
-	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') ? TRUE : FALSE);
 }
 
 /**
@@ -81,25 +51,9 @@ void set_format_error(const char *format, int *pos, int len,
 		_putchar('%');
 		for (i = 0; i <= len; i++)
 		{
-			if (!is_length(format[*pos + i]))
+			if (!length_modifier(format[*pos + i]))
 				_putchar(format[*pos + i]);
 		}
 		(*pos) += len;
 	}
-}
-
-/**
- * put_num - Prints a number to the buffer
- * @zeros_count: The number of zeros to print
- * @num: The number
- * @str: The string representation of the number
- */
-void put_num(int zeros_count, long num, char *str)
-{
-	int i;
-
-	for (i = 0; i < zeros_count; i++)
-		_putchar('0');
-	for (i = num < 0 ? 1 : 0; *(str + i) != '\0'; i++)
-		_putchar(*(str + i));
 }

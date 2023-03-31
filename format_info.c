@@ -3,28 +3,28 @@
 
 /**
  * init_format_info - initializes a format info struct
- * @spec: The format info to initialize
+ * @specifier: The format info to initialize
  */
-void init_format_info(fmt_info_t *spec)
+void init_format_info(format *specifier)
 {
-	if (spec)
+	if (specifier)
 	{
-		spec->prec = 1;
-		spec->width = 0;
-		spec->spec = FALSE;
-		spec->is_long_double = FALSE;
-		spec->is_long_long = FALSE;
-		spec->is_long = FALSE;
-		spec->is_short = FALSE;
-		spec->is_char = FALSE;
-		spec->is_precision_set = FALSE;
-		spec->is_width_set = FALSE;
-		spec->alt = FALSE;
-		spec->space = FALSE;
-		spec->left = FALSE;
-		spec->show_sign = FALSE;
-		spec->group = FALSE;
-		spec->pad = ' ';
+		specifier->precision = 1;
+		specifier->width = 0;
+		specifier->specifier = FALSE;
+		specifier->is_long_double = FALSE;
+		specifier->is_long_long = FALSE;
+		specifier->is_long = FALSE;
+		specifier->is_short = FALSE;
+		specifier->is_char = FALSE;
+		specifier->is_precision_set = FALSE;
+		specifier->is_width_set = FALSE;
+		specifier->hash = FALSE;
+		specifier->space = FALSE;
+		specifier->left_align = FALSE;
+		specifier->plus_sign = FALSE;
+		specifier->group = FALSE;
+		specifier->padding = ' ';
 	}
 }
 
@@ -33,14 +33,14 @@ void init_format_info(fmt_info_t *spec)
  *
  * Return: The pointer to the newly created format info structure or NULL
  */
-fmt_info_t *new_format_info()
+format *new_format_info()
 {
-	fmt_info_t *spec;
+	format *specifier;
 
-	spec = malloc(sizeof(fmt_info_t));
-	if (spec)
-		init_format_info(spec);
-	return (spec);
+	specifier = malloc(sizeof(format));
+	if (specifier)
+		init_format_info(specifier);
+	return (specifier);
 }
 
 /**

@@ -40,12 +40,12 @@ The value should be padded with zeros rather than spaces.
 .SS
 .I
 -
-The converted value should be left aligned on the field boundary. The default is right alignment on the field boundary.
+The converted value should be left_align aligned on the field boundary. The default is right alignment on the field boundary.
 .RS
 .SS
 .I
 " "
-(a space) Signifies that a blank space be left before a positive number that is produced by a signed conversion
+(a space) Signifies that a blank space be left_align before a positive number that is produced by a signed conversion
 .RS
 .SS
 .I
@@ -54,7 +54,7 @@ A sign (+ or -) should always be placed before a number produced by a signed con
 
 .SS The field width
 This is an optional decimal digit string (with nonzero first digit) that specifies the
-minimum field width. The converted value is padded with spaces on the left (or right if the left-alignment flag has been given)
+minimum field width. The converted value is padded with spaces on the left_align (or right if the left_align-alignment flag has been given)
 if the converted value has fewer characters than the field width. One may write * to
 specify that the field width is given in the next argument, which must be an integer type. The field
 width does not cause truncation of the converted value. The converted value must be printed
@@ -111,7 +111,7 @@ If the precision is not specified or is greater than the size of the array, a nu
 .I
 d, i
 The int argument is converted to signed decimal notation. The precision,
-if any, specifies the minimum number of digits that must appear; the converted value is paaded on the left with zeros if the value's length is less than the precision.
+if any, specifies the minimum number of digits that must appear; the converted value is paaded on the left_align with zeros if the value's length is less than the precision.
 When 0 is printed with an explicit precision 0, the output is empty.
 .RS
 .SS
@@ -119,7 +119,7 @@ When 0 is printed with an explicit precision 0, the output is empty.
 o, u, x, X
 The unsigned int argument is converted to unsigned octal (o), unsigned decimal (u), or unsigned
 hexadecimal (x and X) notation. The letters abcdef are used for x conversions, whilst the upper case equivalent is used for X conversions. The precision,
-if any, specifies the minimum number of digits that must appear; the converted value is paaded on the left with zeros if the value's length is less than the precision.
+if any, specifies the minimum number of digits that must appear; the converted value is paaded on the left_align with zeros if the value's length is less than the precision.
 .RS
 .SS
 .I

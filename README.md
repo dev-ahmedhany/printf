@@ -25,7 +25,7 @@ The format specifier uses the following pattern:
 %[flag][width][.precision][length]specifier
 ```
 
-The fields in brackets are optional, a spec must be provided, and the fields must appear in the same order as the pattern provided above. If a spec isn't provided (or the format specifier is invalid) and the format specifier is at the end of the format string an error occurs. On the contrary, if the spec isn't provided (or the format specifier is invalid) and the format specifier is not at the end of the string, the raw invalid format specifier is printed as is.
+The fields in brackets are optional, a specifier must be provided, and the fields must appear in the same order as the pattern provided above. If a specifier isn't provided (or the format specifier is invalid) and the format specifier is at the end of the format string an error occurs. On the contrary, if the specifier isn't provided (or the format specifier is invalid) and the format specifier is not at the end of the string, the raw invalid format specifier is printed as is.
 
 ### Supported Flags
 
@@ -33,8 +33,8 @@ The fields in brackets are optional, a spec must be provided, and the fields mus
 |:---:|:---|
 | # | The value should be converted to an alternate form. |
 | 0 | The value should be padded with zeros rather than spaces. |
-| - | The output should be left-aligned on the field boundary since the default is right-alignment on the field boundary. |
-| ' ' | (a space) A blank space should be left before a positive number that is produced by a sign conversion. |
+| - | The output should be left_align-aligned on the field boundary since the default is right-alignment on the field boundary. |
+| ' ' | (a space) A blank space should be left_align before a positive number that is produced by a sign conversion. |
 | + | A sign (+ or -) should always be placed before a number produced by a signed conversion. By default only the signs of negative numbers are shown. |
 
 ### Width And Precision
