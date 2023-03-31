@@ -97,7 +97,7 @@ int _putchar(char c);
 int _putstr(char *str);
 int write_to_buffer(char c, char action);
 int _printf(const char *format, ...);
-void placeHolder(va_list *args_list, format *fmt_info);
+void placeHolder(va_list *args_list, fmt_info_t *fmt_info);
 
 
 void print_n_times(char c, int n);
@@ -107,36 +107,36 @@ void set_format_error(const char *, int *, int len, int, int *);
 void _putnum(int zeros_count, long num, char *str);
 
 
-void init_format_info(format *specifier);
-format *new_format_info();
+void init_format_info(fmt_info_t *specifier);
+fmt_info_t *new_format_info();
 float_info_t *new_float_info(ushort_t exponent_size, ushort_t mantissa_size);
 void free_float_info(float_info_t *flt_info);
 
 
 int set_number(const char *str, int *number);
-void set_length(char cur, int *pos, format *fmt_info);
-int set_flags(const char *str, format *fmt_info);
+void set_length(char cur, int *pos, fmt_info_t *fmt_info);
+int set_flags(const char *str, fmt_info_t *fmt_info);
 void set_precision(const char *str, va_list args,
-	format *fmt_info, int *i, int *error_status);
-int read_format_info(const char *, va_list, format *, int *);
+	fmt_info_t *fmt_info, int *i, int *error_status);
+int read_format_info(const char *, va_list, fmt_info_t *, int *);
 
 
-void printf_percent(va_list *args_list, format *fmt_info);
-void printf_pointer(va_list *args_list, format *fmt_info);
-void printf_char(va_list *args_list, format *fmt_info);
-void printf_string(va_list *args_list, format *fmt_info);
+void printf_percent(va_list *args_list, fmt_info_t *fmt_info);
+void printf_pointer(va_list *args_list, fmt_info_t *fmt_info);
+void printf_char(va_list *args_list, fmt_info_t *fmt_info);
+void printf_string(va_list *args_list, fmt_info_t *fmt_info);
 
-void printf_integer(va_list *args_list, format *fmt_info);
-void printf_hex(va_list *args_list, format *fmt_info);
-void printf_octal(va_list *args_list, format *fmt_info);
-void printf_unsigned(va_list *args_list, format *fmt_info);
+void printf_integer(va_list *args_list, fmt_info_t *fmt_info);
+void printf_hex(va_list *args_list, fmt_info_t *fmt_info);
+void printf_octal(va_list *args_list, fmt_info_t *fmt_info);
+void printf_unsigned(va_list *args_list, fmt_info_t *fmt_info);
 
-void printf_binary(va_list *args_list, format *fmt_info);
-void printf_rot13(va_list *args_list, format *fmt_info);
-void printf_rev_str(va_list *args_list, format *fmt_info);
-void printf_S(va_list *args_list, format *fmt_info);
+void printf_binary(va_list *args_list, fmt_info_t *fmt_info);
+void printf_rot13(va_list *args_list, fmt_info_t *fmt_info);
+void printf_rev_str(va_list *args_list, fmt_info_t *fmt_info);
+void printf_S(va_list *args_list, fmt_info_t *fmt_info);
 
-void printf_float(va_list *args_list, format *fmt_info);
+void printf_float(va_list *args_list, fmt_info_t *fmt_info);
 
 
 int _strlen(char *str);
