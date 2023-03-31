@@ -9,7 +9,7 @@
  *
  * Return: The number of characters written
  */
-void printf_rot13(va_list *args_list, format *fmt_info)
+void printf_rot13(va_list *args_list, fmt_info_t *fmt_info)
 {
 	int i, len, is_low_1, is_low_2, is_upper, is_lower;
 	char *str = va_arg(*args_list, char *);

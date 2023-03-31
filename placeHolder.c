@@ -10,7 +10,7 @@
  * @args_list: The arguments list
  * @fmt_info: The format info parameters that were read
  */
-void placeHolder(va_list *args_list, format *fmt_info)
+void placeHolder(va_list *args_list, fmt_info_t  *fmt_info)
 {
 	int i;
 	spec_printer_t spec_printers[] = {

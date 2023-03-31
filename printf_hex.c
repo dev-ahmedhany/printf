@@ -10,7 +10,7 @@
  *
  * Return: The number of characters written
  */
-void printf_hex(va_list *args_list, format *fmt_info)
+void printf_hex(va_list *args_list, fmt_info_t  *fmt_info)
 {
 	int i, len = 0, zeros_count = 0, max_w, max_p, num_len;
 	unsigned long num;

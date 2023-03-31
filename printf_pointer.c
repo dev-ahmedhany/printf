@@ -8,7 +8,7 @@
  * @args_list: The arguments list
  * @fmt_info: The format info
  */
-void printf_pointer(va_list *args_list, format *fmt_info)
+void printf_pointer(va_list *args_list, fmt_info_t *fmt_info)
 {
 	int i, len;
 	void *ptr = va_arg(*args_list, void *);

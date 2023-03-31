@@ -10,7 +10,7 @@
  *
  * Return: The number of characters written
  */
-void printf_S(va_list *args_list, format *fmt_info)
+void printf_S(va_list *args_list, fmt_info_t *fmt_info)
 {
 	int i, len;
 	char *str = va_arg(*args_list, char *);

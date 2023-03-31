@@ -62,7 +62,7 @@ struct format_info
 	char group;
 	char padding;
 };
-typedef struct format_info format;
+typedef struct format_info fmt_info_t;
 /**
  * struct spec_printer - Represents a function that prints an argument
  * \ based on a determined format

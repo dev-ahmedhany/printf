@@ -10,7 +10,7 @@
  *
  * Return: The number of characters written
  */
-void printf_octal(va_list *args_list, format *fmt_info)
+void printf_octal(va_list *args_list, fmt_info_t *fmt_info)
 {
 	int i = 0, zeros_count = 0, num_len = 0, len = 0, max_w, max_p;
 	unsigned long num;

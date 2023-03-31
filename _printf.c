@@ -14,7 +14,7 @@
 int _printf(const char *format, ...)
 {
 	int i = 0, tmp, processing_escape = FALSE, error = 1, last_token;
-	format fmt_info;
+	fmt_info_t fmt_info;
 	va_list args;
 
 	if (!format || (format[0] == '%' && format[1] == '\0'))

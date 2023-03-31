@@ -37,7 +37,7 @@ int set_number(const char *str, int *number)
  * @fmt_info: The pointer to the destination format struct
  * @pos: The pointer to the current position in the format string
  */
-void set_length(char cur, int *pos, format *fmt_info)
+void set_length(char cur, int *pos, fmt_info_t *fmt_info)
 {
 	fmt_info->is_long = cur == 'l' ? TRUE : fmt_info->is_long;
 	fmt_info->is_short = cur == 'h' ? TRUE : fmt_info->is_short;
@@ -51,7 +51,7 @@ void set_length(char cur, int *pos, format *fmt_info)
  *
  * Return: The number of flags that were read
  */
-int set_flags(const char *str, format *fmt_info)
+int set_flags(const char *str, fmt_info_t *fmt_info)
 {
 	int i = 0;
 
@@ -78,7 +78,7 @@ int set_flags(const char *str, format *fmt_info)
  * @error_status: The pointer to the error variable
  */
 void set_precision(const char *str, va_list args,
-	format *fmt_info, int *i, int *error_status)
+	fmt_info_t *fmt_info, int *i, int *error_status)
 {
 	fmt_info->is_precision_set = TRUE;
 	if (*(str + *i) == '*')
@@ -112,7 +112,7 @@ void set_precision(const char *str, va_list args,
  * , this is negative when there's an error
  */
 int read_format_info(const char *str, va_list args,
-	format *fmt_info, int *last_token)
+	fmt_info_t *fmt_info, int *last_token)
 {
 	int i = 0, no_error = 1, order = 0;
 
