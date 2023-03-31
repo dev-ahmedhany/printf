@@ -158,10 +158,10 @@ char *str_copy(char *str);
 
 
 char hex_digit(char c);
-char cmp_nums(char *left_align, char *right);
+char compare_numbers(char *left_align, char *right);
 int str_to_int(char *num);
 int bin_to_int(char *bin_str);
-char *long_to_oct(unsigned long num);
+char *long_to_octal(unsigned long num);
 
 char *multiply(char *num, char *multiple);
 char *add_int(char *left_align, char *right, int can_free);
@@ -169,24 +169,24 @@ char *add_float(char *left_align, char *right, char can_free);
 char *mul_int(char *num1, char *num2, char can_free);
 char *mul_float(char *left_align, char *right, char can_free);
 
-char *div_by_10_exp(char *num, unsigned short n, char can_free);
-char *two_exp(short n);
-char *five_exp(unsigned short n);
-unsigned int two_pexp(unsigned int n);
-char *u_long_to_hex(unsigned long num, char upper);
+char *div_by_pow_10(char *num, unsigned short n, char can_free);
+char *two_pow_x(short n);
+char *five_pow_n(unsigned short n);
+unsigned int two_pow_n(unsigned int n);
+char *unsigned_long_to_hex(unsigned long num, char upper);
 
 char *round_float(char *num, unsigned int precision, char can_free);
 char *round_float_to_int(char *num, int len, int dec_pos, int frac_len);
 
 
-char *u_long_to_str(unsigned long num);
+char *unsigned_long_to_str(unsigned long num);
 char *long_to_str(long num);
 char *ptr_to_str(void *ptr);
 char *check_validity(float_info_t *flt_info);
 
 void set_float_parts(double num,	uchar_t exponent_size,
 	uchar_t mantissa_size, float_info_t *float_info);
-char *mantissa_to_dec_fraction(char *mantissa, unsigned short frac_len);
+char *_to_dec_fraction(char *mantissa, unsigned short frac_len);
 char *float_to_str(float_info_t *flt_info, char can_free);
 
 

@@ -20,7 +20,7 @@ void printf_unsigned(va_list *args_list, fmt_info_t *fmt_info)
 		num = (va_arg(*args_list, unsigned int) << 2 * 8) >> 2 * 8;
 	else
 		num = va_arg(*args_list, unsigned int);
-	str = u_long_to_str(num);
+	str = unsigned_long_to_str(num);
 	if (str)
 	{
 		if (FMT_PREC_EMPTY(fmt_info) && !num)

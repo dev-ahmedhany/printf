@@ -27,7 +27,7 @@ int set_number(const char *str, int *number)
 			break;
 		}
 	}
-	*number = cmp_nums(digits, MAX_WIDTH) <= 0 ? str_to_int(digits) : 0;
+	*number = compare_numbers(digits, MAX_WIDTH) <= 0 ? str_to_int(digits) : 0;
 	return (i);
 }
 

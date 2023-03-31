@@ -22,7 +22,7 @@ void printf_octal(va_list *args_list, fmt_info_t *fmt_info)
 		num = (va_arg(*args_list, unsigned long) << 2 * 8) >> 2 * 8;
 	else
 		num = va_arg(*args_list, unsigned int);
-	str = long_to_oct(num);
+	str = long_to_octal(num);
 	if (str)
 	{
 		if (fmt_info->is_precision_set && !fmt_info->precision && !num)

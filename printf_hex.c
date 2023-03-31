@@ -22,7 +22,7 @@ void printf_hex(va_list *args_list, fmt_info_t  *fmt_info)
 		num = va_arg(*args_list, unsigned long);
 	else
 		num = va_arg(*args_list, unsigned int);
-	str = u_long_to_hex(num, fmt_info->specifier == 'X');
+	str = unsigned_long_to_hex(num, fmt_info->specifier == 'X');
 	if (str)
 	{
 		if (fmt_info->is_precision_set && !fmt_info->precision && !num)
