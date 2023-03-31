@@ -171,7 +171,6 @@ char *unsigned_long_to_hex(unsigned long num, char upper);
 char *round_float(char *num, unsigned int precision, char can_free);
 char *round_float_to_int(char *num, int len, int dec_pos, int frac_len);
 
-
 char *unsigned_long_to_str(unsigned long num);
 char *long_to_str(long num);
 char *ptr_to_str(void *ptr);
