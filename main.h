@@ -116,7 +116,6 @@ int set_flags(const char *str, fmt_info_t *fmt_info);
 void set_precision(const char *str, va_list args,
 	fmt_info_t *fmt_info, int *i, int *error_status);
 
-
 void printf_percent(va_list *args_list, fmt_info_t *fmt_info);
 void printf_pointer(va_list *args_list, fmt_info_t *fmt_info);
 void printf_char(va_list *args_list, fmt_info_t *fmt_info);
