@@ -149,7 +149,6 @@ char *trim_start(char *str, char c, char can_free);
 char *trim_end(char *str, char c, char can_free);
 char *str_copy(char *str);
 
-
 char hex_digit(char c);
 char compare_numbers(char *left_align, char *right);
 int str_to_int(char *num);
