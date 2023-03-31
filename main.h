@@ -132,7 +132,6 @@ void printf_rev_str(va_list *args_list, fmt_info_t *fmt_info);
 void printf_S(va_list *args_list, fmt_info_t *fmt_info);
 void printf_float(va_list *args_list, fmt_info_t *fmt_info);
 
-
 int _strlen(char *str);
 void mem_set(char *str, int n, char c);
 void left_shift(char *str, int n);
