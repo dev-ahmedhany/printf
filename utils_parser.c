@@ -55,7 +55,7 @@ int set_flags(const char *str, fmt_info_t *fmt_info)
 {
 	int i = 0;
 
-	while (*(str + i) != '\0' && is_flag(*(str + i)))
+	while (*(str + i) != '\0' && flag_characters(*(str + i)))
 	{
 		fmt_info->space = *(str + i) == ' ' ? TRUE : fmt_info->space;
 		fmt_info->left_align = *(str + i) == '-' || fmt_info->left_align ? TRUE : FALSE;
@@ -119,7 +119,7 @@ int read_format_info(const char *str, va_list args,
 	init_format_info(fmt_info);
 	for (; str && *(str + i) != '\0' && !fmt_info->specifier && no_error == 1;)
 	{
-		if (is_flag(*(str + i)) && order < 1)
+		if (flag_characters(*(str + i)) && order < 1)
 		{
 			i += set_flags(str + i, fmt_info), order = 1;
 		}

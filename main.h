@@ -108,6 +108,7 @@ void _putnum(int zeros_count, long num, char *str);
 
 
 void init_format_info(fmt_info_t *specifier);
+int read_format_info(const char *, va_list, fmt_info_t *, int *);
 fmt_info_t *new_format_info();
 float_info_t *new_float_info(ushort_t exponent_size, ushort_t mantissa_size);
 void free_float_info(float_info_t *flt_info);
@@ -118,7 +119,6 @@ void set_length(char cur, int *pos, fmt_info_t *fmt_info);
 int set_flags(const char *str, fmt_info_t *fmt_info);
 void set_precision(const char *str, va_list args,
 	fmt_info_t *fmt_info, int *i, int *error_status);
-int read_format_info(const char *, va_list, fmt_info_t *, int *);
 
 
 void printf_percent(va_list *args_list, fmt_info_t *fmt_info);
@@ -135,7 +135,6 @@ void printf_binary(va_list *args_list, fmt_info_t *fmt_info);
 void printf_rot13(va_list *args_list, fmt_info_t *fmt_info);
 void printf_rev_str(va_list *args_list, fmt_info_t *fmt_info);
 void printf_S(va_list *args_list, fmt_info_t *fmt_info);
-
 void printf_float(va_list *args_list, fmt_info_t *fmt_info);
 
 
@@ -163,9 +162,10 @@ int str_to_int(char *num);
 int bin_to_int(char *bin_str);
 char *long_to_octal(unsigned long num);
 
-char *multiply(char *num, char *multiple);
 char *add_int(char *left_align, char *right, int can_free);
 char *add_float(char *left_align, char *right, char can_free);
+
+char *multiply(char *num, char *multiple);
 char *mul_int(char *num1, char *num2, char can_free);
 char *mul_float(char *left_align, char *right, char can_free);
 
@@ -193,6 +193,6 @@ char *float_to_str(float_info_t *flt_info, char can_free);
 char is_digit(char c);
 char non_custom_specifier(char c);
 char is_specifier(char c);
-char is_flag(char c);
+char flag_characters(char c);
 char length_modifier(char c);
 #endif
