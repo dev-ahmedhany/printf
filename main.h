@@ -181,7 +181,6 @@ void set_float_parts(double num,	uchar_t exponent_size,
 char *_to_dec_fraction(char *mantissa, unsigned short frac_len);
 char *float_to_str(float_info_t *flt_info, char can_free);
 
-
 char is_digit(char c);
 char non_custom_specifier(char c);
 char is_specifier(char c);
