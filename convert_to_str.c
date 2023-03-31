@@ -4,7 +4,7 @@
 #include "main.h"
 
 /**
- * unsigned_long_to_str - Converts an unsigned long 
+ * unsigned_long_to_str - Converts an unsigned long
  * to its string representation
  * @num: The unsigned long integer
  *

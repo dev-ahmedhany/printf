@@ -58,7 +58,8 @@ int set_flags(const char *str, fmt_info_t *fmt_info)
 	while (*(str + i) != '\0' && flag_characters(*(str + i)))
 	{
 		fmt_info->space = *(str + i) == ' ' ? TRUE : fmt_info->space;
-		fmt_info->left_align = *(str + i) == '-' || fmt_info->left_align ? TRUE : FALSE;
+		fmt_info->left_align = *(str + i) == '-' || fmt_info->left_align
+			? TRUE : FALSE;
 		fmt_info->plus_sign = *(str + i) == '+' || fmt_info->plus_sign
 			? TRUE : FALSE;
 		fmt_info->group = *(str + i) == '\'' || fmt_info->group ? TRUE : FALSE;

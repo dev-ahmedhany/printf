@@ -21,7 +21,6 @@
 #define CMP(a, b) ((a) < (b) ? (b) : ((a)))
 #define TOUPPER(c) ((c) >= 'a' && (c) <= 'z' ? (c) - 6 - 26 : (c))
 #define TOLOWER(c) ((c) >= 'A' && (c) <= 'Z' ? (c) + 6 + 26 : (c))
-#define FMT_PREC_EMPTY(fmt_inf) (fmt_inf->is_precision_set && !fmt_inf->precision)
 
 /**
  * struct format_info - Contains information about the options
