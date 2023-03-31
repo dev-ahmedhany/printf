@@ -37,7 +37,7 @@ fmt_info_t  *new_format_info()
 {
 	fmt_info_t  *specifier;
 
-	specifier = malloc(sizeof(fmt_info_t ));
+	specifier = malloc(sizeof(fmt_info_t));
 	if (specifier)
 		init_format_info(specifier);
 	return (specifier);
