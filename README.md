@@ -6,22 +6,6 @@ This project is an implementation of the [`printf`](https://www.tutorialspoint.c
 
 The `main.h` header must be included before you can use the function. The `_printf` function returns the number of characters that were printed to stdout.
 
-```c
-#include "main.h"
-
-/*
-* main - Entry point
-*
-* Return: Always 0
-*/
-int main(void)
-{
-  int n = _printf("Wind: %d%s and Precipitation: %d%%\\n", 28, "km/h", 0x1a);
-
-  return (0);
-}
-```
-
 ### The Format Specifier Pattern
 
 The format specifier uses the following pattern:
