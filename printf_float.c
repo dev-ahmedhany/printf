@@ -15,8 +15,7 @@ void printf_float(va_list *args_list, fmt_info_t  *fmt_info)
 	int i, len, num_len, zeros_count, max_w;
 	double num = va_arg(*args_list, double);
 	char *str, has_sign = (fmt_info->plus_sign && num >= 0) || num < 0;
-	ushort_t exp_size = fmt_info->is_long_double ? 15 : 11;
-	ushort_t mant_size = fmt_info->is_long_double ? 64 : 52;
+	ushort_t exp_size = fmt_info->is_long_double ? 15 : 11, mant_size = fmt_info->is_long_double ? 64 : 52;
 	float_info_t *flt_info;
 
 	flt_info = new_float_info(exp_size, mant_size);
@@ -27,12 +26,10 @@ void printf_float(va_list *args_list, fmt_info_t  *fmt_info)
 		if (str == NULL)
 		{
 			str = float_to_str(flt_info, FALSE);
-			str = round_float(str, fmt_info->is_precision_set ?
-			 fmt_info->precision : 6, T);
+			str = round_float(str, fmt_info->is_precision_set ? fmt_info->precision : 6, T);
 			num_len = _strlen(str) + ((fmt_info->plus_sign && num >= 0) ? 1 : 0);
 			max_w = MAX(fmt_info->width, num_len);
-			zeros_count = (max_w - num_len) * !fmt_info->left_align *
-			 (fmt_info->padding == '0');
+			zeros_count = (max_w - num_len) * !fmt_info->left_align * (fmt_info->padding == '0');
 			len = max_w - (zeros_count + num_len);
 			for (i = 0; !fmt_info->left_align && i < len; i++)
 				_putchar(' ');
