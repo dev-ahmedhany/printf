@@ -9,6 +9,11 @@ The `main.h` header must be included before you can use the function. The `_prin
 ```c
 #include "main.h"
 
+/*
+* main - Entry point
+*
+* Return: Always 0
+*/
 int main(void)
 {
   int n = _printf("Wind: %d%s and Precipitation: %d%%\\n", 28, "km/h", 0x1a);
